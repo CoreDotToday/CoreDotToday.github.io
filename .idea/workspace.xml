@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40558bca-6f36-4f76-b144-60c95dab8cad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" afterPath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" afterPath="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-08-25-Auto-tagging의 과정.markdown" pinned="false" current-in-tab="true">
+      <file leaf-file-name="2018-08-25-Auto-tagging의 과정.markdown" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="30">
@@ -60,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-08-26-test-post.tex" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018-08-26-test-post.tex" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-26-test-post.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <state relative-caret-position="195">
+              <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -146,10 +146,10 @@
         <option value="$PROJECT_DIR$/_posts/2018-09-12-test-post.tex" />
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md" />
-        <option value="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" />
         <option value="$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md" />
         <option value="$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md" />
         <option value="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
+        <option value="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" />
       </list>
     </option>
   </component>
@@ -747,14 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-08-26-test-post.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-09-01-LDA와 토픽 모델링에 대한 기본적인 이해.md">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="615">
@@ -798,6 +790,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-08-26-test-post.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding />
         </state>
       </provider>
