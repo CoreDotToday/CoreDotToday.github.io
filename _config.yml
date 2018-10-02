@@ -1,11 +1,11 @@
 # Site settings
-title: Hux Blog
-SEOTitle: 黄玄的博客 | Hux Blog
+title: 코어닷블로그
+SEOTitle: 데이터테크 기업 코어닷 투데이의 기술 블로그입니다
 header-img: img/home-bg.jpg
-email: huxpro@gmail.com
-description: "关于程序与设计、黑客与画家 | 黄玄，Web & Mobile Lover，Software Engineer，UX Designer | 这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界。"
-keyword: "黄玄, Hux黄玄, Hux, 鬼栈, huxpro, @huxpro, 黄玄的博客, Hux Blog, 博客, 个人网站, 互联网, Web, JavaScript, 前端, 设计"
-url: "https://huangxuan.me"              # your host, for absolute URL
+email: core.today
+description: "본 블로그는 코어닷 투데이의 기술 블로그로, 머신러닝, 딥러닝, 자연어처리, 네트워크 방법론 등 데이터 분석을 진행함에 따라, 기술적 요소에 대한 코어닷 투데이의 노하우를 담았습니다."
+keyword: "자연어처리, Topic-Modeling, 시계열처리, 머신러닝, 딥러닝, 데이터 마이닝, 데이터테크"
+url: "http://dohppak.github.io"              # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -13,10 +13,10 @@ future: true
 
 # SNS settings
 RSS: false
-weibo_username:     huxpro
-zhihu_username:     huxpro
-github_username:    huxpro
-twitter_username:   huxpro
+weibo_username:     core.today
+zhihu_username:     core.today
+github_username:    core.today
+twitter_username:   core.today
 #facebook_username:  huxpro
 #linkedin_username:  firstname-lastname-idxxxx
 
