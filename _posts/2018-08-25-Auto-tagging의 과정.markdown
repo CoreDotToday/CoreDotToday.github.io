@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "LDA와 토픽 모델링에 대한 기본적인 이해"
+title: "Auto-tagging 글을 써야지"
 subtitle: "테라비이트의 텍스트 문서를 분석하는 방법"
 author: "SeungHeon Doh"
 header-img: "img/post-bg-halting.jpg"

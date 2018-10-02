@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40558bca-6f36-4f76-b144-60c95dab8cad" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md" afterPath="$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md" afterPath="$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" afterPath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -51,25 +50,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2018-08-25-Auto-tagging의 과정.markdown" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2018-08-25-Auto-tagging의 과정.markdown" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
+            <state relative-caret-position="30">
+              <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="2018-08-17-모델 파라미터 튜닝.md" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="30">
-                <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-                <folding />
-              </first_editor>
-              <second_editor />
             </state>
           </provider>
         </entry>
@@ -161,9 +147,9 @@
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md" />
         <option value="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" />
-        <option value="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
         <option value="$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md" />
         <option value="$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md" />
+        <option value="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
       </list>
     </option>
   </component>
@@ -786,14 +772,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="52" column="34" lean-forward="false" selection-start-line="52" selection-start-column="34" selection-end-line="52" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
@@ -813,6 +791,14 @@
             <folding />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
