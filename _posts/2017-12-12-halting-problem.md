@@ -1,28 +1,27 @@
 ---
 layout: post
-title: "「知乎」如何通俗地解释停机问题？"
-subtitle: "How to explain the Halting Problem?"
-author: "Hux"
+title: "「LDA와 토픽 모델링에 대한 기본적인 이해"
+subtitle: "테라비이트의 텍스트 문서를 분석하는 방법"
+author: "도승헌"
 header-img: "img/post-bg-halting.jpg"
 header-mask: 0.3
 tags:
-  - 知乎
-  - 计算机科学
-  - 计算理论
+  - LDA
+  - Gensim
+  - 토픽모델링
 ---
 
-> 这篇文章转载自[我在知乎上的回答]( https://www.zhihu.com/question/20081359/answer/275107187)
+> 본 문서는 다음과 같은 사이트를 참고하였습니다.
+> [Gensim](https://radimrehurek.com/gensim/about.html)
+> [ratsgo - 토픽모델링](https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/06/01/LDA/)
 
-我用 Python 伪代码来解释下，我觉得对这个问题有兴趣的应该都是有点编程基础的，所以直接上 code 应该是最容易的。
+데이터마이닝의 한 분야인 텍스트마이닝은 텍스트문서, 이메일, HTML문서와 같이 비구조화(Unstructured), 혹은 반구조화(Semi-Structured) 된 텍스트문서에서<br>
+새로운 정보를 추출하는 정보기술로, 토픽모델링은 텍스트 마이닝에서 사용하는 연구방법론이다. 가장 대표적인 토픽모델링 기법인 Blei etal.(2003)의<br>
+LDA(Latent Dirichlet Allocation)은 다수의 문서에서 잠재적으로 의미 있는 토픽을 발견하는 절차적 확률 분포 모델이다. LDA는 단어들의 집합이<br>
+어떤 토픽들로 묶인다고 가정하고, 이 단어들이 각각의 토픽에 구성될 확률을 계산하여 결과 값을 토픽에 해당할 가능성이 높은 단어들의 집합으로 추출하는 방식이다.<br>
 
-## 背景知识
-
-「停机问题」研究的是：是否存在一个「程序」，能够判断另外一个「程序」在特定的「输入」下，是会给出结果（停机），还是会无限执行下去（不停机）。
-
-在下文中，我们用「函数」来表示「程序」，「函数返回」即表示给出了结果。
-
-## 正文
-
+## Gensim이란?
+주어진 기사에 가장 유사한 기사를 생성하는 기능을 구현하고 싶었던 개발자들이 만들어낸 라이브러리 입니다.(gensim = “generate similar”) <br> “Latent Semantic Methods”을 개발하고자 시작했던
 我们假设存在这么一个「停机程序」，不管它是怎么实现的，但是它能够回答「停机问题」：它接受一个「程序」和一个「输入」，然后判断这个「程序」在这个「输入」下是否能给出结果：
 
 ```py
