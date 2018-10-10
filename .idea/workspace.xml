@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="40558bca-6f36-4f76-b144-60c95dab8cad" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md" beforeDir="false" afterPath="$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,9 +26,21 @@
       <file leaf-file-name="2018-09-17-모델 파라미터 튜닝.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="510">
-                <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="4545">
+                <caret line="303" column="21" lean-forward="true" selection-start-line="303" selection-start-column="21" selection-end-line="303" selection-end-column="21" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2018-08-25-Auto-tagging의 과정.markdown" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="375">
+                <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
               </first_editor>
               <second_editor />
             </state>
@@ -73,8 +85,8 @@
         <option value="$PROJECT_DIR$/_layouts/post.html" />
         <option value="$PROJECT_DIR$/_posts/2018-09-08-데이터 전처리.md" />
         <option value="$PROJECT_DIR$/_posts/2018-08-17-모델 파라미터 튜닝.md" />
-        <option value="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
         <option value="$PROJECT_DIR$/_posts/2018-08-26-test-post.tex" />
+        <option value="$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown" />
         <option value="$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md" />
       </list>
     </option>
@@ -230,11 +242,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/_posts/2018-08-25-Auto-tagging의 과정.markdown">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="375">
+            <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2018-09-17-모델 파라미터 튜닝.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="510">
-            <caret line="34" column="1" selection-start-line="34" selection-start-column="1" selection-end-line="34" selection-end-column="1" />
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="4545">
+            <caret line="303" column="21" lean-forward="true" selection-start-line="303" selection-start-column="21" selection-end-line="303" selection-end-column="21" />
           </first_editor>
           <second_editor />
         </state>

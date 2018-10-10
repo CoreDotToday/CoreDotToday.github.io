@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Auto-tagging 글을 써야지"
-subtitle: "테라비이트의 텍스트 문서를 분석하는 방법"
+title: "LDA와 AUTOtagging 을 이요"
+subtitle: "토픽 모델링을 통한 새로운 "
 author: "SeungHeon Doh"
 header-img: "img/post-bg-halting.jpg"
 header-mask: 0.3
