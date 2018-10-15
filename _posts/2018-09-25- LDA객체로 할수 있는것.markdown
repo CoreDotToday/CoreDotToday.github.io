@@ -51,21 +51,21 @@ pyLDAvis는 파이썬의 토픽모델링을 구현시켜주는 좋은 툴입니�
 왼쪽 2차원 버블 차트는 PCA에 의해 변환된 토픽들이며, 오른쪽 bar 차트는 해당 토픽을 대표하는 단어들로 구성되어 있습니다.
 해당 단어들은 relevance라는 measure에 의해 대표되고 있는데요 과연 무엇을 의미하는 것일까요?
 
-### Lambda Change 구현
+#### Lambda Change 구현
 
-#### $$relevance(term w | topic t) = λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
+##### $$relevance(term w | topic t) = λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
 
 - Goal : topic 에 대해서 relevent 한 term이 무엇인가?.
 
 
-#### Relevance 란?
+##### Relevance 란?
 
 Topic 안에 있는 Terms 을 평하는 기준이 됩니다. <br>
 $$p(w|t)$$ 는 특정한 용어 w가 topic 에 등장할 확률입니다. <br>
 $$p(w)$$ 은 특정 코퍼스의 marginal probability 입니다. <br>
 
 
-#### Relevance (원문)
+##### Relevance (원문)
 
 ##### $$relevance(term w | topic t) = λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
 
@@ -82,21 +82,20 @@ Lambda
  - λ determines the weight given to the probability of term $$w$$ under topic $$k$$ relative to its lift.
  
  
- ## Topic의 관점에서 할수 있는것!
-- pyLDAvis : LDA시각화
+### 1.2. LDA function
 - Topic-term
 - Get_topics_terms
 - Get_topics
 - show_topics
 
-### Get_topic_terms(topicid, topn=10)
+#### Get_topic_terms(topicid, topn=10)
 하나의 토픽에 관하여, 토픽을 대표하는 term들에 대해서 ID값을 리턴합니다.
 
-#### Parameters:	
+##### Parameters:	
 topicid (int) – 지정한 topic number중 원하는 id값을 선언합니다.
 topn (int, optional) – 토픽을 대표하는 단어들 중, 상위 n개의 중요성을 가지는 단어를 반환합니다.
 
-#### Return:	
+##### Return:	
 Word ID - term의 ID와 해당 확률값을 반환합니다
 
 
@@ -119,10 +118,10 @@ topic_term1
 ```
 0번째 topic을 대표하는 10가지 term의 ID는 33번, 53번, 386번, 47번... 등등 이였습니다.
 
-### Get_topics()
+#### Get_topics()
 Get_topics함수는 Term-topic Metrics를 반환 받을수 있습니다.
 
-#### Returns
+##### Returns
 shape (num_topics, vocabulary_size) 으로 구성되어 있는, 토픽별 단어의 확률 분포를 받을 수 있습니다.
 
 ```python
@@ -146,4 +145,8 @@ array([[1.97014360e-05, 1.33696623e-04, 2.89882792e-05, ...,
 ```
 본 함수는 나중에 위에서 나온 relevance의 lambda값을 조절하고 싶을때 사용하게 됩니다.
 
+
+## 2. Documents view : 문서의 관점
+
+## 3. Term view : 단어의 관점
 
