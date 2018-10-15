@@ -1,0 +1,148 @@
+---
+layout: post
+title: "LDA와 AUTOtagging 을 이요"
+subtitle: "토픽 모델링을 통한 새로운 "
+author: "SeungHeon Doh"
+header-img: "img/post-bg-halting.jpg"
+header-mask: 0.3
+tags:
+  - LDA
+  - Gensim
+  - 토픽모델링
+---
+
+> 본 문서는 다음과 같은 사이트를 참고하였습니다.<br>
+> [Gensim](https://radimrehurek.com/gensim/about.html)<br>
+> [ratsgo - 토픽모델링](https://ratsgo.github.io/from%20frequency%20to%20semantics/2017/06/01/LDA/)
+
+
+# LDA로 그럼 이제 무엇을 해야하나요?
+
+Gensim LDA 객체를 한번 다시 살펴봅시다. LDA 객체는 3가지 관점에서 살펴 볼수 있습니다. 첫번째는 Topic의 관점, 두번째는 documents의 관점, 그리고 마지막은 term의 관점입니다.
+
+### Data를 넣어봅시다
+
+지난번에 전처리하고 파라미터를 튜닝했었던 문서를 다시 호출해 봅시다.
+
+```python
+if (os.path.exists('stop&bi(min=2,threshold=50,no_above=0.5).dict')):
+    dictionary = corpora.Dictionary.load('stop&bi(min=2,threshold=50,no_above=0.5).dict')
+    corpus = corpora.MmCorpus('stop&bi(min=2,threshold=50,no_above=0.5).mm')
+    LDA = LdaModel.load('coredotLDA.model')
+    print("LDA, Dictionary와 corpus가 준비되었습니다!")
+else:
+    print("데이터가 없어요!")
+```
+
+```pythonstub
+LDA, Dictionary와 corpus가 준비되었습니다!
+```
+좋습니다 이제 시작할 수 있어요!
+
+## 1. Topic view : 토픽의 관점
+
+토픽의 관점에서 다른 요소를 본다면, 토픽별 관련이 높은 documents 그리고 관련이 높은 term을 반환할수 있어야합니다. 외부 라이브러리인 pyLDAvis와 gensim LDA객체에 내장되어있는 몇가지 함수들을 소개하려고 합니다.
+
+### 1.1. pyLDAvis
+pyLDAvis는 파이썬의 토픽모델링을 구현시켜주는 좋은 툴입니다.
+
+모델링에서 최적화 시킨 토픽별 토픽을 대표하는 단어들을 반환시킨 후 PCA를 통해 2차원에 mapping시킵니다.
+
+왼쪽 2차원 버블 차트는 PCA에 의해 변환된 토픽들이며, 오른쪽 bar 차트는 해당 토픽을 대표하는 단어들로 구성되어 있습니다.
+해당 단어들은 relevance라는 measure에 의해 대표되고 있는데요 과연 무엇을 의미하는 것일까요?
+
+### Lambda Change 구현
+
+#### $$relevance(term w | topic t) = λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
+
+- Goal : topic 에 대해서 relevent 한 term이 무엇인가?.
+- saliency(term $$w$$) = frequency($$w$$) * [sum_t p(t | w) * log(p(t | w)/p(t))] for topics t
+- relevance(term $$w$$ | topic $$t$$) = $$λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
+
+#### Relevance 란?
+
+Topic 안에 있는 Terms 을 평하는 기준이 됩니다. <br>
+$p(w|t)$ 는 특정한 용어 w가 topic 에 등장할 확률입니다. <br>
+$p(w)$ 은 특정 코퍼스의 marginal probability 입니다. <br>
+
+
+#### Relevance (원문)
+
+##### $$relevance(term w | topic t) = λ * p(w | t) + (1 - λ) * p(w | t)/p(w)$$
+
+
+Definition
+ - Let $$\phi_{kw}$$ denote the probability of term $w$ in $$[1,..,V]$$ for topic $$k$$ in $$[1,..,K]$$, where $$V$$ denote the number of terms in the vocabulary(전체 코퍼스).
+ - Let $$p_{w}$$ denote the marginal probability of term $$w$$ in corpus.
+
+Expaination
+ - $$\phi$$ in LDA using Variational Bayes methods or Collapsed Gibbs sampling
+ - $$p_{w}$$ emprical distribution of the corpus
+
+Lambda
+ - λ determines the weight given to the probability of term $$w$$ under topic $$k$$ relative to its lift.
+ 
+- pyLDAvis : LDA시각화
+- Topic-term
+- Get_topics_terms
+- Get_topics
+- show_topics
+
+### Get_topic_terms(topicid, topn=10)
+하나의 토픽에 관하여, 토픽을 대표하는 term들에 대해서 ID값을 리턴합니다.
+
+#### Parameters:	
+topicid (int) – 지정한 topic number중 원하는 id값을 선언합니다.
+topn (int, optional) – 토픽을 대표하는 단어들 중, 상위 n개의 중요성을 가지는 단어를 반환합니다.
+
+#### Return:	
+Word ID - term의 ID와 해당 확률값을 반환합니다
+
+
+```python
+topic_term1 = LDA.get_topic_terms(0,10)
+topic_term1
+```
+
+```pythonstub
+[(33, 0.10774062),
+ (53, 0.10437591),
+ (386, 0.088203155),
+ (47, 0.06783413),
+ (457, 0.05815126),
+ (550, 0.04847299),
+ (72, 0.040648986),
+ (120, 0.03677915),
+ (52, 0.035780977),
+ (1076, 0.020439167)]
+```
+0번째 topic을 대표하는 10가지 term의 ID는 33번, 53번, 386번, 47번... 등등 이였습니다.
+
+### Get_topics()
+Get_topics함수는 Term-topic Metrics를 반환 받을수 있습니다.
+
+#### Returns
+shape (num_topics, vocabulary_size) 으로 구성되어 있는, 토픽별 단어의 확률 분포를 받을 수 있습니다.
+
+```python
+LDA.get_topics()
+```
+
+```pythonstub
+array([[1.97014360e-05, 1.33696623e-04, 2.89882792e-05, ...,
+        1.15434468e-05, 1.31974211e-05, 1.15434468e-05],
+       [3.47235109e-05, 1.58586330e-03, 5.10913997e-05, ...,
+        2.03451655e-05, 2.32602724e-05, 2.03451655e-05],
+       [6.87927386e-05, 5.27945766e-03, 1.01220096e-04, ...,
+        4.03069716e-05, 4.60822594e-05, 4.03069716e-05],
+       ...,
+       [3.37744605e-05, 2.22615796e-04, 4.99950911e-05, ...,
+        1.97891004e-05, 2.26245320e-05, 1.97891004e-05],
+       [1.03068400e-04, 6.52172836e-04, 1.51652537e-04, ...,
+        6.03897352e-05, 6.90425295e-05, 6.03897352e-05],
+       [1.80663948e-04, 1.14951900e-03, 4.16062307e-03, ...,
+        1.05854437e-04, 1.21021534e-04, 1.05854437e-04]], dtype=float32)
+```
+본 함수는 나중에 위에서 나온 relevance의 lambda값을 조절하고 싶을때 사용하게 됩니다.
+
+
