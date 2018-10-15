@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "LDA와 AUTOtagging 을 이요"
-subtitle: "토픽 모델링을 통한 새로운 "
+title: "LDA로 할수 있는것"
+subtitle: "LDA로 토픽모델링을 구현하면 무엇을 할 수 있나요?"
 author: "SeungHeon Doh"
 header-img: "img/post-bg-halting.jpg"
 header-mask: 0.3
