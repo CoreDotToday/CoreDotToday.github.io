@@ -56,7 +56,7 @@ pyLDAvis.enable_notebook()
 pyLDAvis.gensim.prepare(LDA, corpus, dictionary)
 ```
 
-{% include lda.html %} 
+{% include_relative somewhere/lda.html %}
 
 
 #### Lambda Change 구현
