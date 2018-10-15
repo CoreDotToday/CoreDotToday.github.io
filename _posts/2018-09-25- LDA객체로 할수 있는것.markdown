@@ -50,6 +50,14 @@ pyLDAvis는 파이썬의 토픽모델링을 구현시켜주는 좋은 툴입니�
 
 왼쪽 2차원 버블 차트는 PCA에 의해 변환된 토픽들이며, 오른쪽 bar 차트는 해당 토픽을 대표하는 단어들로 구성되어 있습니다.
 해당 단어들은 relevance라는 measure에 의해 대표되고 있는데요 과연 무엇을 의미하는 것일까요?
+```python
+import pyLDAvis.gensim
+pyLDAvis.enable_notebook()
+pyLDAvis.gensim.prepare(LDA, corpus, dictionary)
+```
+
+{% include lda.html %} 
+
 
 #### Lambda Change 구현
 
